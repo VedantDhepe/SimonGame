@@ -1,68 +1,31 @@
- *{
-    margin:0px;
-    padding:0px;
-
-} 
-.mainbox{
-    
-    background-color: #544242;
+body{
+    text-align: center;
 }
-.box {
-    height: 100vh;
+.container-div{
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-.container{
-    height: 90vh;
-    width:80%;
-    display:flex;
-    background-color: #fffdfd;
-}
-.form {
-    background-color:#ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  
-}
-.form>h1{
-    margin-bottom: 20px;
-    margin-right: 30px;
-}
-.gender{
-    display: flex;
-    margin-left: 10px;
-}
-input{
-   margin: 10px;
-   padding: 10px;
 }
 
-#country-state, #state-city{
-    margin: 10px;
-    padding: 10px;
+.block{
+    height: 200px;
+    width: 200px;
+    margin: 1.5rem;
+    border: solid black 10px;
+    border-radius: 30px;
 }
-.long-text {
-    width: 371px;
+
+.red{
+    background-color: #eb1414;
 }
-.reset-submit >button, .reset-submit>input {
-    background-color: rgb(243, 181, 48);
-    padding:3px 20px;
-    margin-top: 30px;
+.yellow{
+    background-color: #e3f115;
 }
-.reset-submit{
-    margin-left: 142px;
+.blue{
+    background-color: #13c3df;
 }
-.reset-submit>button{
-    border-radius: 5px;
-    color: white;
+.purple{
+    background-color: #f31ebd;
 }
-.reset-submit>input{
-    margin-right: 50px;
-    border: 2px;
-    background-color: #f9f9f9;
-    
+.flash{
+    background-color: white;
 }
