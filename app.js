@@ -42,11 +42,11 @@ function checkAns(idx){
         }
     } 
     else{   
-        document.querySelector('body').style.backgroundColor = "red";
+        document.querySelector('container-div').style.backgroundColor = "red";
         h2.innerText = `Game Over! \nYour Score is ${level-1} \nPress any key to start the Game`;
         h2.style.fontSize = "30px";
         restart();
-        setTimeout(()=>{document.querySelector('body').style.backgroundColor = "white";
+        setTimeout(()=>{document.querySelector('container-div').style.backgroundColor = "white";
                         h2.style.fontSize = "20px";
                          },500);
     }
