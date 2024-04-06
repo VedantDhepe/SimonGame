@@ -5,7 +5,12 @@ body{
     display: flex;
     justify-content: center;
 }
-
+button{
+    font-size:20px;
+    color:rgb(255, 0, 0);
+    background-color: rgba(53, 227, 18, 0.92);
+    border-radius: 10px;
+}
 .block{
     height: 200px;
     width: 200px;
