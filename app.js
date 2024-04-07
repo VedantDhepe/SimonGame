@@ -45,7 +45,8 @@ function checkAns(idx){
     else{   
         document.querySelector('.container-div').style.backgroundColor = "red";
         if(level == 0) level = 1;
-        h2.innerText = `Game Over! \nYour Score is ${level-1} \nHighest Score : ${record} \nPress any key to start the Game`;
+        h2.innerText = `Game Over! \nYour Score is ${level-1} \nHighest Score : ${record} \nPress the button to Restart the Game`;
+       btn.innerText = "Restart";
         h2.style.fontSize = "30px";
         restart();
         setTimeout(()=>{document.querySelector('.container-div').style.backgroundColor = "white";
