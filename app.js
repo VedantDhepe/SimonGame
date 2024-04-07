@@ -1,12 +1,14 @@
-let gameSeq = [];
+let gameSeq = []; 
 let userSeq = []; 
 let btns = ['red','blue','yellow','purple'];
+let score = [0];
 let started = false;
 let h2 = document.querySelector("h2");
 let btn = document.querySelector("button");
 let level = 0;
-
+let record = 0;
 btn.addEventListener('click', function(){
+   
     if(started ==false){
         console.log("The game is started");
         started = true;
@@ -22,12 +24,11 @@ function btnFlash(btn){
             btn.classList.remove("flash");
         }, 150);
 }
-
 function levelUp(){
     userSeq =[];
     level++;
-    h2.innerText = `Level ${level}`;
-
+    h2.innerText = `Level ${level} \nHighest Score : ${record}`;
+    score.push(level);
     let randomIdx = Math.floor(Math.random() * 4 );
     let randomElement = btns[randomIdx];
     let randombtn = document.querySelector(`.${randomElement}`);
@@ -42,15 +43,17 @@ function checkAns(idx){
         }
     } 
     else{   
-        document.querySelector('container-div').style.backgroundColor = "red";
-        h2.innerText = `Game Over! \nYour Score is ${level-1} \nPress any key to start the Game`;
+        document.querySelector('.container-div').style.backgroundColor = "red";
+        if(level == 0) level = 1;
+        h2.innerText = `Game Over! \nYour Score is ${level-1} \nHighest Score : ${record} \nPress any key to start the Game`;
         h2.style.fontSize = "30px";
         restart();
-        setTimeout(()=>{document.querySelector('container-div').style.backgroundColor = "white";
+        setTimeout(()=>{document.querySelector('.container-div').style.backgroundColor = "white";
                         h2.style.fontSize = "20px";
-                         },500);
+                         },100);
     }
-    
+    score.push(level);
+    record = highestScore();
 }
 function btnPress(){
     let btn = this;
@@ -70,3 +73,14 @@ function restart(){
     userSeq = [];
     started = false;
 }
+function highestScore(){ 
+   let max = -1;
+   for(s of score){
+    if(s>max){
+        max = s;
+    }
+   }
+   return max;
+}
+
+
